@@ -1,0 +1,306 @@
+/*
+Theme Name: markspace
+Description:  Einfache, saubere Thema
+Author: Mark Allan Hatcher
+Template:  twentytwelve
+Version: 1.0.1
+*/
+
+
+@import url('../twentytwelve/style.css');
+
+
+
+
+
+
+/* set  font to google fonts colour blue.  Need to insert element in local head.php to load font.   */
+h1, h2, h3, h4 { 
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	color: #00C;
+}
+
+
+
+
+
+/*site header includes image + site caption and then menu bar*/
+.site-header {
+padding: 4px 0;
+/* padding: 1.714285714rem 0; */
+}
+
+
+
+/*set top margins for header image*/
+.header-image {
+margin-top: 0px;
+margin-top: 0rem;
+}
+
+/*This is the main container for page within the browswer*/
+body .site {
+padding: 0 40px;
+padding: 0 2.857142857rem;
+margin-top: 5px;
+margin-bottom: 48px;
+margin-bottom: 3.428571429rem;
+box-shadow: 0 0px 0px rgba(100, 100, 100, 0.3);
+}
+
+
+/*set top margin for menu*/
+.main-navigation {
+margin-top: 5px;
+
+}
+
+/*site caption*/
+.site-header h2 {
+font-weight: 400;
+font-weight: normal;
+font-size: 14px;
+font-size: 1.2rem;
+line-height: 1.4;
+color: #8C8B92;
+margin-bottom: 25px;
+}
+
+
+
+.entry-header .entry-title {
+font-size: 34px;
+font-size: 2rem;
+margin-bottom: 5px;
+}
+
+
+
+/*set the entire background to white*/
+body {
+background-color: #ffffff;
+}
+
+
+
+
+/* set h2 size   */
+.entry-content h2, .comment-content h2, .mu_register h2 {
+font-size: 22px;
+font-size: 1.5rem;
+line-height: 1.6;
+}
+
+
+/*  this is for the body */
+.entry-content p, .entry-summary p, .comment-content p, .mu_register p {
+font-family: "pragmatica-web",sans-serif;
+margin: 0 0 24px;
+margin: 0 0 1.714285714rem;
+line-height: 1.6;
+}
+
+
+/* Images do not have rounded corners.  There is no box shadow on the images.  */
+.entry-content img, .comment-content img, .widget img, img.header-image, .author-avatar img, img.wp-post-image {
+	border-radius: 0px;
+	box-shadow:  none;
+}
+
+/* Make sure the headings do not have any space underneath   */
+.entry-content h1, .comment-content h1, .entry-content h2, 
+.comment-content h2, .entry-content h3, .comment-content h3, 
+.entry-content h4, .comment-content h4, .entry-content h5, 
+.comment-content h5, .entry-content h6, .comment-content h6 {
+margin: 0px 0;
+margin: 0rem 0;
+line-height: 1.714285714;
+}
+
+
+
+/*Widget title*/
+.archive-title, .page-title, .widget-title, .entry-content th, .comment-content th {
+font-size: 15px;
+font-size: 1.1rem;
+line-height: 2.181818182;
+font-weight: bold;
+text-transform: uppercase;
+color: #636363;
+}
+
+
+.widget-area .widget h3 {
+margin-bottom: 9px;
+margin-bottom: 0.8rem;
+}
+
+.widget-area .widget {
+margin-bottom: 48px;
+margin-bottom: 3.428571429rem;
+
+
+border-top-width: 1px;
+border-top-style: solid;
+border-top-color: rgb(237, 237, 237);
+padding-top: 4px;
+
+
+padding-bottom: 8px;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgb(237, 237, 237);
+}
+
+.cc_distribute {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 15px;
+	margin-bottom: 8px;
+
+}
+
+/*  line height for caption text   */
+.wp-caption .wp-caption-text, .gallery-caption, .entry-caption {
+line-height: 1.4;
+color: #757575;
+}
+
+
+
+
+
+/*les modèles pour les "tags"*/
+
+h3.markTag {
+
+	display:inline;
+	font-style:italic;
+}
+
+ul.markTag {
+	display:inline;
+	list-style-type:none;	
+	/* remove indentation */		
+	padding-left:0px
+}
+
+
+li.markTag a {
+	font: Ubuntu;
+	color: #00C;
+	text-decoration: none;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-right: 3px;
+	font-size: 10px;
+	border-radius: 4px;
+	border: 1px solid #7C7C7C;
+	background-color:#E0E0E0;
+}
+
+li.markTag a:hover {
+	background-color:#DCD8F7;
+	border-color:#000;
+}
+
+li.markTag {
+	display: inline;
+	}
+
+/* SOCIAL ICONS IN SIDEBAR */
+
+#social-icons li {
+
+}
+#social-icons a:link,
+#social-icons a:hover,
+#social-icons a:visited {
+	display: block;
+	float: left;
+	text-indent: -9999px;
+	width: 32px;
+	height: 32px;
+	margin: 0 10px 10px 0;
+}
+
+.social-twitter a {
+	background: url('images/SM-Twitter.jpg') no-repeat;
+}
+
+.social-facebook a {
+	background: url('images/SM-FaceBook.jpg') no-repeat;
+}
+
+.social-linkedin a {
+	background: url('images/SM-LinkedIn.jpg') no-repeat;
+}
+
+.social-google a {
+	background: url('images/SM-Google.jpg') no-repeat;
+}
+
+/* Creative Commons */
+
+#creative-commons-logo li {
+
+}
+#creative-commons-logo a:link,
+#creative-commons-logo a:hover,
+#creative-commons-logo a:visited {
+	display: block;
+	float: none;
+	text-indent: -9999px;
+	width: 144px;
+	height: 38px;
+	margin: 0 10px 10px 0;
+}
+
+.cc-mainlogo a {
+	background: url('images/CreativeCommons.jpg') no-repeat;
+}
+
+}
+
+#creative-commons-icon li {
+
+}
+
+
+#creative-commons-icon a:link,
+#creative-commons-icon a:hover,
+#creative-commons-icon a:visited {
+	display: block;
+	float: left;
+	text-indent: -9999px;
+	width: 32px;
+	height: 32px;
+	margin: 0 10px 10px 0;
+}
+
+.cc-icon-cc a {
+	background: url('images/cc-cc.gif') no-repeat;
+}
+
+.cc-icon-person a {
+	background: url('images/cc-person.gif') no-repeat;
+}
+
+.cc-icon-dollar a {
+	background: url('images/cc-dollar.gif') no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
