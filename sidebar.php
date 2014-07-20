@@ -14,6 +14,7 @@
 		require_once('sidebar-share.php');
 		require_once('sidebar-recent.php');
 		require_once('sidebar-cc.php');
+		require_once('sidebar-github.php');
 	?>
 </div><!-- #secondary -->
 

@@ -10,6 +10,7 @@
  */
 ?>
 
+	
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
 		<div class="featured-post">
@@ -17,30 +18,51 @@
 		</div>
 		<?php endif; ?>
 		<header class="entry-header">
+			
 			<!--  the_post_thumbnail() displays the featured image. 
 			<?php the_post_thumbnail(); ?>
 			-->	
+			
 			<?php if ( is_single() ) : ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h3 class="markTag">Tags: &nbsp;</h3>
+				<?php
+					if(get_the_tag_list()) {
+	    				echo get_the_tag_list('<ul class="markTag"><li class = "markTag">',
+	    					'</li><li class = "markTag">','</li></ul>');
+					}
+				?>
 			<?php else : ?>
 			
-			<!-- Orginally was the following (inside h1 tags):
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>-->			
-			<h1 class="entry-title">
-				<?php the_title(); ?>
-			</h1>
-			
-			<!-- Added this to print the tags at the top of a post.  Got the code snippet from twentytwelve_entry_meta() -->
-			
-			<h3 class="markTag">Tags: &nbsp;</h3>
-			<?php
-				if(get_the_tag_list()) {
+				<!-- Orginally was the following (inside h1 tags):
+				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>-->			
+				<h1 class="entry-title">
+					<?php the_title(); ?>
+				</h1>
+				
+				<!-- Added this to print the tags at the top of a post.  Got the code snippet from twentytwelve_entry_meta() -->
+				
 
-    				echo get_the_tag_list('<ul class="markTag"><li class = "markTag">',
-    					'</li><li class = "markTag">','</li></ul>');
-				}
-			?>
+				<h3 class="markTag">Tags: &nbsp;</h3>
+				<?php
+					if(get_the_tag_list()) {
+
+	    				echo get_the_tag_list('<ul class="markTag"><li class = "markTag">',
+	    					'</li><li class = "markTag">','</li></ul>');
+					}
+				?>
+				
+
 			<?php endif; // is_single() ?>
+			
+
+			<?php if ( is_search() || is_archive() || is_category() || is_tag() ) : // Only display Excerpts for Search ?>
+				<div class="index-fi" >
+					<?php the_post_thumbnail(); ?>
+				</div>
+			<?php endif; ?>
+
+
 			<?php if ( comments_open() ) : ?>
 				<div class="comments-link">
 					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
@@ -48,8 +70,8 @@
 			<?php endif; // comments_open() ?>
 		</header><!-- .entry-header -->
 
-		
-		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		<!-- displays insert for the following page types. -->
+		<?php if ( is_search() || is_archive() || is_category() || is_tag() ) : // Only display Excerpts for Search ?>
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->

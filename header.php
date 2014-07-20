@@ -29,6 +29,9 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53424541619114b4"></script>
+
+
 </head>
 
 <body <?php body_class(); ?>>

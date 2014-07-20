@@ -7,11 +7,11 @@
 	<ul class="recent-posts-ul">
 	<?php
 		$myPosts = new WP_Query();
-		$myPosts->query('showposts=5');
+		$myPosts->query('showposts=8');
 		while ($myPosts->have_posts()) : $myPosts->the_post();
 			echo "<li class=\"recent-posts-li\">";
 			$permalink = get_permalink( $id );
-				echo "<a href=\""   . $permalink .  "\"target=\"_blank\">";
+				echo "<a href=\""   . $permalink .  "\"target=\"_self\">";
 				echo the_title() . "</a>"	;
 			echo "</li>";			
 		endwhile;
